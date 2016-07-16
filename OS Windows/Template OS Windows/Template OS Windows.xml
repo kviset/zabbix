@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.0</version>
+    <date>2016-07-01T12:40:37Z</date>
+    <groups>
+        <group>
+            <name>Temlates OS</name>
+        </group>
+        <group>
+            <name>Templates</name>
+        </group>
+        <group>
+            <name>Templates Custom</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template OS Windows private</template>
+            <name>Template OS Windows private</name>
+            <description/>
+            <groups>
+                <group>
+                    <name>Temlates OS</name>
+                </group>
+                <group>
+                    <name>Templates</name>
+                </group>
+                <group>
+                    <name>Templates Custom</name>
+                </group>
+            </groups>
+            <applications/>
+            <items/>
+            <discovery_rules/>
+            <macros/>
+            <templates>
+                <template>
+                    <name>Template OS Windows public</name>
+                </template>
+            </templates>
+            <screens/>
+        </template>
+        <template>
+            <template>Template OS Windows public</template>
+            <name>Template OS Windows public</name>
+            <description/>
+            <groups>
+                <group>
+                    <name>Temlates OS</name>
+                </group>
+                <group>
+                    <name>Templates</name>
+                </group>
+                <group>
+                    <name>Templates Custom</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Security</name>
+                </application>
+                <application>
+                    <name>Windows</name>
+                </application>
+                <application>
+                    <name>Log</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Windows: Security event</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip]</key>
+                    <delay>30</delay>
+                    <history>30</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>2</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Log</name>
+                        </application>
+                        <application>
+                            <name>Security</name>
+                        </application>
+                        <application>
+                            <name>Windows</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Windows: System error event</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>eventlog[System,,Error,,,,skip]</key>
+                    <delay>30</delay>
+                    <history>30</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>2</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Log</name>
+                        </application>
+                        <application>
+                            <name>Security</name>
+                        </application>
+                        <application>
+                            <name>Windows</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Windows:1</name>
+                    <type>15</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>script.windows.1</key>
+                    <delay>60</delay>
+                    <history>1</history>
+                    <trends>1</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params>1</params>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Log</name>
+                        </application>
+                        <application>
+                            <name>Windows</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Windows: not installed updates count</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>wua.getnumupdates</key>
+                    <delay>3600</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Security</name>
+                        </application>
+                        <application>
+                            <name>Windows</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Windows: need reboot</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>wua.rebootrequest</key>
+                    <delay>3600</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Security</name>
+                        </application>
+                        <application>
+                            <name>Windows</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+            </items>
+            <discovery_rules/>
+            <macros/>
+            <templates>
+                <template>
+                    <name>Template OS Windows</name>
+                </template>
+            </templates>
+            <screens/>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template OS Windows public:script.windows.1.last()}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].count(300,&quot;An account failed to log on.&quot;,&quot;like&quot;)}&gt;5</expression>
+            <name>Windows: detect bruteforce</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template OS Windows public:wua.getnumupdates.last()}&gt;0</expression>
+            <name>Windows: need install updates: {ITEM.VALUE1}</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template OS Windows public:wua.rebootrequest.last()}&gt;0</expression>
+            <name>Windows: need reboot</name>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template OS Windows public:script.windows.1.last()}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].logeventid(4732)}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].nodata(5m)}=0</expression>
+            <name>Windows: Security event 'A member was added to a security-enabled local group'</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template OS Windows public:script.windows.1.last()}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].logeventid(4733)}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].nodata(5m)}=0</expression>
+            <name>Windows: Security event 'A member was removed from a security-enabled local group'</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template OS Windows public:script.windows.1.last()}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].logeventid(4724)}=1  and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].nodata(5m)}=0</expression>
+            <name>Windows: Security event 'An attempt was made to reset an accounts password'</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template OS Windows public:script.windows.1.last()}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].logeventid(4735)}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].nodata(5m)}=0</expression>
+            <name>Windows: Security event 'A security-enabled local group was changed'</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template OS Windows public:script.windows.1.last()}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].logeventid(4731)}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].nodata(5m)}=0</expression>
+            <name>Windows: Security event 'A security-enabled local group was created'</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template OS Windows public:script.windows.1.last()}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].logeventid(4734)}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].nodata(5m)}=0</expression>
+            <name>Windows: Security event 'A security-enabled local group was deleted'</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template OS Windows public:script.windows.1.last()}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].logeventid(4738)}=1 and&#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].regexp(&quot;Security ID:\s+S-1-5-18&quot;)}=0 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].nodata(5m)}=0</expression>
+            <name>Windows: Security event 'A user account was changed'</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template OS Windows public:script.windows.1.last()}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].logeventid(4720)}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].nodata(5m)}=0</expression>
+            <name>Windows: Security event 'A user account was created'</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template OS Windows public:script.windows.1.last()}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].logeventid(4726)}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].nodata(5m)}=0</expression>
+            <name>Windows: Security event 'A user account was deleted'</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template OS Windows public:script.windows.1.last()}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].logeventid(4725)}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].nodata(5m)}=0</expression>
+            <name>Windows: Security event 'A user account was disabled'</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template OS Windows public:script.windows.1.last()}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].logeventid(4740)}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].nodata(5m)}=0</expression>
+            <name>Windows: Security event 'A user account was locked out'</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template OS Windows public:script.windows.1.last()}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].logeventid(1102)}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].nodata(5m)}=0</expression>
+            <name>Windows: Security event 'The audit log was cleared'</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template OS Windows public:script.windows.1.last()}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].logeventid(4781)}=1 and &#13;
+{Template OS Windows public:eventlog[Security,,,,1102|4625|4720|4724|4725|4726|4731|4732|4733|4734|4735|4738|4781,,skip].nodata(5m)}=0</expression>
+            <name>Windows: Security event 'The name of an account was changed'</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template OS Windows public:script.windows.1.last()}=1 and &#13;
+{Template OS Windows public:eventlog[System,,Error,,,,skip].count(300)}&gt;0</expression>
+            <name>Windows: system event log has error</name>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+    </triggers>
+</zabbix_export>

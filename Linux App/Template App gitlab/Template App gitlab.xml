@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.0</version>
+    <date>2016-07-07T11:05:50Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+        <group>
+            <name>Templates App</name>
+        </group>
+        <group>
+            <name>Templates Custom</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template App gitlab</template>
+            <name>Template App gitlab</name>
+            <description/>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+                <group>
+                    <name>Templates App</name>
+                </group>
+                <group>
+                    <name>Templates Custom</name>
+                </group>
+            </groups>
+            <applications/>
+            <items/>
+            <discovery_rules/>
+            <macros>
+                <macro>
+                    <macro>{$NGINX_ACCESSLOG}</macro>
+                    <value>/var/log/gitlab/nginx/gitlab_access.log</value>
+                </macro>
+                <macro>
+                    <macro>{$NGINX_BIN}</macro>
+                    <value>/opt/gitlab/embedded/sbin/nginx</value>
+                </macro>
+                <macro>
+                    <macro>{$NGINX_CONF}</macro>
+                    <value>/var/opt/gitlab/nginx/conf</value>
+                </macro>
+                <macro>
+                    <macro>{$NGINX_ERRORLOG}</macro>
+                    <value>/var/log/gitlab/nginx/gitlab_error.log</value>
+                </macro>
+                <macro>
+                    <macro>{$PGPATH}</macro>
+                    <value>/opt/gitlab/embedded/bin/</value>
+                </macro>
+                <macro>
+                    <macro>{$REDIS_BIN}</macro>
+                    <value>/opt/gitlab/embedded/bin/redis-server</value>
+                </macro>
+                <macro>
+                    <macro>{$REDIS_CONF}</macro>
+                    <value>/var/opt/gitlab/redis/redis.conf</value>
+                </macro>
+                <macro>
+                    <macro>{$REDIS_URI}</macro>
+                    <value>unix://var/opt/gitlab/redis/redis.socket</value>
+                </macro>
+                <macro>
+                    <macro>{$UNICORN_CONF}</macro>
+                    <value>/var/opt/gitlab/gitlab-rails/etc/unicorn.rb</value>
+                </macro>
+                <macro>
+                    <macro>{$UNICORN_ERRLOG}</macro>
+                    <value>/var/log/gitlab/unicorn/unicorn_stderr.log</value>
+                </macro>
+            </macros>
+            <templates>
+                <template>
+                    <name>Template App Nginx</name>
+                </template>
+                <template>
+                    <name>Template App PostgreSQL</name>
+                </template>
+                <template>
+                    <name>Template App Redis</name>
+                </template>
+                <template>
+                    <name>Template App unicorn</name>
+                </template>
+            </templates>
+            <screens/>
+        </template>
+    </templates>
+</zabbix_export>

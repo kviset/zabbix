@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.0</version>
+    <date>2016-07-08T12:33:16Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+        <group>
+            <name>Templates App</name>
+        </group>
+        <group>
+            <name>Templates Custom</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template App Zabbix ext</template>
+            <name>Template App Zabbix ext</name>
+            <description/>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+                <group>
+                    <name>Templates App</name>
+                </group>
+                <group>
+                    <name>Templates Custom</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Log</name>
+                </application>
+                <application>
+                    <name>Security</name>
+                </application>
+                <application>
+                    <name>Zabbix server</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>zabbix: log</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>log[{$ZABBIXLOG},,,,skip,]</key>
+                    <delay>60</delay>
+                    <history>30</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>2</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Log</name>
+                        </application>
+                        <application>
+                            <name>Zabbix server</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt>pppppp:yyyyMMdd:hhmmss</logtimefmt>
+                </item>
+                <item>
+                    <name>Zabbix server: process num</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>proc.num[{$ZABBIXMODE}]</key>
+                    <delay>300</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Zabbix server</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>zabbix: log msg count</name>
+                    <type>15</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>script.zabbix.log.count</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>mps</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params>count(&quot;log[{$ZABBIXLOG},,,,skip,]&quot;,3600)/3600</params>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Log</name>
+                        </application>
+                        <application>
+                            <name>Zabbix server</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>zabbix: log 'became not supported' msg count</name>
+                    <type>15</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>script.zabbix.log.nsupport.count</key>
+                    <delay>3600</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>mps</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params>count(&quot;log[{$ZABBIXLOG},,,,skip,]&quot;,12h,&quot;became not supported&quot;,&quot;like&quot;)/12h</params>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Log</name>
+                        </application>
+                        <application>
+                            <name>Zabbix server</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Zabbix server: configuration</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>vfs.file.cksum[/etc/zabbix/{$ZABBIXMODE}.conf]</key>
+                    <delay>3600</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Security</name>
+                        </application>
+                        <application>
+                            <name>Zabbix server</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Zabbix server: binary</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>vfs.file.cksum[/usr/sbin/{$ZABBIXMODE}]</key>
+                    <delay>3600</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Security</name>
+                        </application>
+                        <application>
+                            <name>Zabbix server</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Zabbix server: log size</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>vfs.file.size[{$ZABBIXLOG}]</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>byte</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Log</name>
+                        </application>
+                        <application>
+                            <name>Zabbix server</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+            </items>
+            <discovery_rules/>
+            <macros>
+                <macro>
+                    <macro>{$ZABBIXLOG}</macro>
+                    <value>/var/log/zabbix/zabbix_server.log</value>
+                </macro>
+                <macro>
+                    <macro>{$ZABBIXMODE}</macro>
+                    <value>zabbix_server</value>
+                </macro>
+            </macros>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template App Zabbix ext:proc.num[{$ZABBIXMODE}].last()}&gt;0 and &#13;
+{Template App Zabbix ext:log[{$ZABBIXLOG},,,,skip,].count(300,&quot;became not supported&quot;,&quot;like&quot;)}&gt;0</expression>
+            <name>Zabbix: log 'became not supported' message detected</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template App Zabbix ext:proc.num[{$ZABBIXMODE}].last()}&gt;0 and &#13;
+{Template App Zabbix ext:log[{$ZABBIXLOG},,,,skip,].count(300,&quot;please increase ValueCacheSize&quot;,&quot;like&quot;)}&gt;0</expression>
+            <name>Zabbix: log 'please increase ValueCacheSize' message detected</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template App Zabbix ext:proc.num[{$ZABBIXMODE}].last()}&gt;0 and &#13;
+{Template App Zabbix ext:log[{$ZABBIXLOG},,,,skip,].count(300,&quot;query failed&quot;,&quot;like&quot;)}&gt;0</expression>
+            <name>Zabbix: log 'query failed' message detected</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template App Zabbix ext:proc.num[{$ZABBIXMODE}].last()}&gt;0 and &#13;
+{Template App Zabbix ext:log[{$ZABBIXLOG},,,,skip,].count(300,&quot;cannot send list of active checks to&quot;,&quot;like&quot;)}&gt;0</expression>
+            <name>Zabbix: log active check error detected</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template App Zabbix ext:proc.num[{$ZABBIXMODE}].last()}&gt;0 and &#13;
+{Template App Zabbix ext:log[{$ZABBIXLOG},,,,skip,].count(300,&quot;error&quot;,&quot;like&quot;)}&gt;0</expression>
+            <name>Zabbix: log error message detected</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template App Zabbix ext:vfs.file.size[{$ZABBIXLOG}].change()}&lt;0 and &#13;
+({Template App Zabbix ext:vfs.file.size[{$ZABBIXLOG}].time()}&gt;{$ROTATETIMEUP} or &#13;
+{Template App Zabbix ext:vfs.file.size[{$ZABBIXLOG}].time()}&lt;{$ROTATETIMEDOWN})</expression>
+            <name>Zabbix: log size decreace</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template App Zabbix ext:proc.num[{$ZABBIXMODE}].last()}&gt;0 and (&#13;
+{Template App Zabbix ext:log[{$ZABBIXLOG},,,,skip,].count(300,&quot;Unlinked OID in&quot;,&quot;like&quot;)}&gt;0 or &#13;
+{Template App Zabbix ext:log[{$ZABBIXLOG},,,,skip,].count(300,&quot;Cannot adopt OID in&quot;,&quot;like&quot;)}&gt;0 or&#13;
+{Template App Zabbix ext:log[{$ZABBIXLOG},,,,skip,].count(300,&quot;Cannot find module (&quot;,&quot;like&quot;)}&gt;0&#13;
+)</expression>
+            <name>Zabbix: log SNMP error message detected</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template App Zabbix ext:proc.num[{$ZABBIXMODE}].last()}&gt;0 and &#13;
+{Template App Zabbix ext:log[{$ZABBIXLOG},,,,skip,].count(300,&quot;warning&quot;,&quot;like&quot;)}&gt;0</expression>
+            <name>Zabbix: log warning message detected</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template App Zabbix ext:script.zabbix.log.nsupport.count.last()}&gt;0.00029</expression>
+            <name>zabbix: too many 'became not supported' events on log</name>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template App Zabbix ext:vfs.file.cksum[/usr/sbin/{$ZABBIXMODE}].diff()}&gt;0</expression>
+            <name>Zabbix server: binary change</name>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template App Zabbix ext:vfs.file.cksum[/etc/zabbix/{$ZABBIXMODE}.conf].diff()}&gt;0</expression>
+            <name>Zabbix server: configuration change</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template App Zabbix ext:proc.num[{$ZABBIXMODE}].last()}&lt;1</expression>
+            <name>Zabbix server: not run</name>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+    </triggers>
+</zabbix_export>

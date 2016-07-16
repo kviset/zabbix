@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.0</version>
+    <date>2016-07-08T11:52:06Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+        <group>
+            <name>Templates App</name>
+        </group>
+        <group>
+            <name>Templates Custom</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template App Zabbix Agent ext</template>
+            <name>Template App Zabbix Agent ext</name>
+            <description/>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+                <group>
+                    <name>Templates App</name>
+                </group>
+                <group>
+                    <name>Templates Custom</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Log</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>zabbix agent: log</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>log[{$ZABBIXAGENTLOG},,,,skip,]</key>
+                    <delay>60</delay>
+                    <history>30</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>2</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Log</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt>pppppp:yyyyMMdd:hhmmss</logtimefmt>
+                </item>
+                <item>
+                    <name>zabbix agent:1</name>
+                    <type>15</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>script.zabbixagent.log.1</key>
+                    <delay>60</delay>
+                    <history>1</history>
+                    <trends>1</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params>1</params>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Log</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Zabbix agent: log size</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>vfs.file.size[{$ZABBIXAGENTLOG}]</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>byte</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Log</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+            </items>
+            <discovery_rules/>
+            <macros>
+                <macro>
+                    <macro>{$ZABBIXAGENTLOG}</macro>
+                    <value>/var/log/zabbix/zabbix_agentd.log</value>
+                </macro>
+            </macros>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template App Zabbix Agent ext:script.zabbixagent.log.1.last()}=1 and {Template App Zabbix Agent ext:log[{$ZABBIXAGENTLOG},,,,skip,].count(300,&quot;is not supported&quot;,&quot;like&quot;)}&gt;0</expression>
+            <name>Zabbix agent: log 'active check is not supported' message detected</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template App Zabbix Agent ext:script.zabbixagent.log.1.last()}=1 and {Template App Zabbix Agent ext:log[{$ZABBIXAGENTLOG},,,,skip,].count(300,&quot;no active checks on server&quot;,&quot;like&quot;)}&gt;0</expression>
+            <name>Zabbix agent: log 'no active checks on server' message detected</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template App Zabbix Agent ext:script.zabbixagent.log.1.last()}=1 and {Template App Zabbix Agent ext:log[{$ZABBIXAGENTLOG},,,,skip,].count(300,&quot;error&quot;,&quot;like&quot;)}&gt;0</expression>
+            <name>Zabbix agent: log error message detected</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template App Zabbix Agent ext:vfs.file.size[{$ZABBIXAGENTLOG}].change()}&lt;0 and &#13;
+({Template App Zabbix Agent ext:vfs.file.size[{$ZABBIXAGENTLOG}].time()}&gt;{$ROTATETIMEUP} or &#13;
+{Template App Zabbix Agent ext:vfs.file.size[{$ZABBIXAGENTLOG}].time()}&lt;{$ROTATETIMEDOWN})</expression>
+            <name>Zabbix agent: log size decreace</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template App Zabbix Agent ext:script.zabbixagent.log.1.last()}=1 and {Template App Zabbix Agent ext:log[{$ZABBIXAGENTLOG},,,,skip,].count(300,&quot;warning&quot;,&quot;like&quot;)}&gt;0</expression>
+            <name>Zabbix agent: log warning message detected</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+    </triggers>
+</zabbix_export>

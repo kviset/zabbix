@@ -41,7 +41,7 @@ winbind use default domain = yes
 ```
 ~# cd /usr/lib/zabbix/externalscripts/ && \
 wget 'https://raw.githubusercontent.com/kviset/zabbix/master/Remote/Template Rmt Active Directory/ad_discovery.pl' && \
-wget ''https://raw.githubusercontent.com/kviset/zabbix/master/Remote/Template Rmt Active Directory/ad_run.pl && \
+wget 'https://raw.githubusercontent.com/kviset/zabbix/master/Remote/Template Rmt Active Directory/ad_run.pl && \
 chown zabbix ad_*.pl && chmod 550 ad_*.pl
  ~# /etc/init.d/zabbix-agent restart
 ```
