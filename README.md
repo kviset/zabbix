@@ -11,8 +11,8 @@
 Темплейты для мониторинга различного оборудования.
 ##Remote
 Темплейты для удаленного мониторинга сервисов и т.п.
+- Template Rmt Active Directory - темплейт для мониторинга Active Directory;
 
-- Template App Active Directory - темплейт для мониторинга Active Directory;
 - Template App Apache2 - темплейт для мониторинга сервера apache2 на ОС Linux;
 - Template App KAV - темплейт для мониторинга событий Антивируса Касперского на ОС Windows;
 - Template App MySQL - темплейт для мониторинга сервера MySQL на ОС Linux;
