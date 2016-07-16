@@ -126,11 +126,11 @@ Remove dayly backup:
 Remove weekly backup: 
 Remove monthly backup: 
 File /tmp/zabbix.1458550528.8498.1582:
-"red.anon.local" script.mysql.backup.version 1458550529 0.0.5
-"red.anon.local" script.mysql.backup.starttime 1458550529 1458550528
-"red.anon.local" script.mysql.backup.size 1458550529 148
-"red.anon.local" script.mysql.backup.count 1458550529 1
-"red.anon.local" script.mysql.backup.duration 1458550529 0.235881090164185
-"red.anon.local" script.mysql.backup.success 1458550529 1
+"red.github.com" script.mysql.backup.version 1458550529 0.0.5
+"red.github.com" script.mysql.backup.starttime 1458550529 1458550528
+"red.github.com" script.mysql.backup.size 1458550529 148
+"red.github.com" script.mysql.backup.count 1458550529 1
+"red.github.com" script.mysql.backup.duration 1458550529 0.235881090164185
+"red.github.com" script.mysql.backup.success 1458550529 1
 zabbix_sender [1614]: DEBUG: answer [{"response":"success","info":"processed: 6; failed: 0; total: 6; seconds spent: 0.000118"}]\ninfo from server: "processed: 6; failed: 0; total: 6; seconds spent: 0.000118"\nsent: 6; skipped: 0; total: 6\n
 ```
