@@ -27,10 +27,9 @@ mkdir /var/lib/zabbix && chown zabbix /var/lib/zabbix/
 
 ## Установка zsender
 ```
-cd /usr/lib/zabbix && \
-git archive --remote=ssh://git@github.com:kviset/zabbix.git \
-HEAD:"Linux App" zsender.pl | tar -x && \
+ ~# cd /usr/lib/zabbix && \
+wget 'https://raw.githubusercontent.com/kviset/zabbix/master/Linux App/zsender.pl' && \
 chown zabbix zsender.pl && chmod 440 zsender.pl
 ```
 
-После этого можно использовать темплейты из данного репозитория.
+После этого можно использовать темплейты из данной директории.
