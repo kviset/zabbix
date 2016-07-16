@@ -1,8 +1,11 @@
 # Описание
 ##Linux App
 Темплейты для мониторинга сервисов установленных на ОС Linux.
+- Template App Apache2 - темплейт для мониторинга сервера apache2 на ОС Linux;
+- Template App MySQL - темплейт для мониторинга сервера MySQL на ОС Linux;
 ##Windows App
 Темплейты для мониторинга сервисов установленных на ОС Windows.
+- Template App KAV - темплейт для мониторинга событий Антивируса Касперского на ОС Windows;
 ##OS Linux
 Темплейты для мониторинга *nix подобных операционных систем.
 ##OS Windows
@@ -13,9 +16,6 @@
 Темплейты для удаленного мониторинга сервисов и т.п.
 - Template Rmt Active Directory - темплейт для мониторинга Active Directory;
 
-- Template App Apache2 - темплейт для мониторинга сервера apache2 на ОС Linux;
-- Template App KAV - темплейт для мониторинга событий Антивируса Касперского на ОС Windows;
-- Template App MySQL - темплейт для мониторинга сервера MySQL на ОС Linux;
 - Template App PostgreSQL - темплейт для мониторинга сервера PostgreSQL на ОС Linux;
 - Template App RDP - темплейт для мониторинга Remote Desktop Services на ОС Windows;
 - Template App Snort - темплейт для мониторинга IPS/IDS Snort на ОС Linux;
