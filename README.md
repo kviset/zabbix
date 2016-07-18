@@ -1,11 +1,13 @@
 # Описание
-##Backup
+## Backup
+
 Темплейты для выполнения резервного копирования.
 - Template Backup MySQL - темплейт для резервного копирования и мониторинга резервного копирования БД MySQL;
 - Template Backup mediawiki - темплейт для резервного копирования и мониторинга резервного копирования mediawiki;
 - Template Backup redmine - темплейт для резервного копирования и мониторинга резервного копирования redmine;
 
-##Linux App
+## Linux App
+
 Темплейты для мониторинга сервисов установленных на ОС Linux.
 - Template App Apache2 - темплейт для мониторинга сервера apache2 на ОС Linux;
 - Template App MySQL - темплейт для мониторинга сервера MySQL на ОС Linux;
@@ -33,7 +35,8 @@
 - Template App unicorn - темплейт для мониторинга Web-сервера unicorn на ОС Linux;
 - Template SNMP Squid Proxy - темплейт для мониторинга squid. [copy from](https://share.zabbix.com/index.php?option=com_mtree&task=att_download&link_id=281&cf_id=37)
 
-##Windows App
+## Windows App
+
 Темплейты для мониторинга сервисов установленных на ОС Windows.
 - Template App KAV - темплейт для мониторинга событий Антивируса Касперского на ОС Windows;
 - Template App RDP - темплейт для мониторинга Remote Desktop Services на ОС Windows;
@@ -43,15 +46,18 @@
 - Template App Windows DNS - темплейт для мониторинга состояния и производительности Windows DNS;
 - Template App Windows IIS - темплейт для мониторинга Windows IIS;
 
-##OS Linux
+## OS Linux
+
 Темплейты для мониторинга *nix подобных операционных систем.
 - Template OS Debina - темплейт для мониторинга ОС Debian;
 
-##OS Windows
+## OS Windows
+
 Темплейты для мониторинга ОС Windows
 - Template OS Windows - темплейт для мониторинга ОС Windows.
 
-##Hardware
+## Hardware
+
 Темплейты для мониторинга различного оборудования.
 - Template HW HP1920 - темплейт для мониторинга коммутаторов серии HP1920 по протоколу SNMP;
 - Template HW HP2530 - темплейт для мониторинга коммутаторов серии HP2530 по протоколу SNMP;
@@ -59,7 +65,8 @@
 - Template HW SMART - темплейт для мониторинга параметров S.M.A.R.T. HDD на ОС Linux;
 - Template HW Supermicro X8QB6 - темплейт для мониторинга серверов Supermicro X8QB6 по протоколу IPMI;
 
-##Remote
+## Remote
+
 Темплейты для удаленного мониторинга сервисов и т.п.
 - Template Rmt Active Directory - темплейт для мониторинга Active Directory;
 - Template Rmt PingNslookup - темплейт для мониторинга состояния соединения с сетью интернет на ОС Linux;
