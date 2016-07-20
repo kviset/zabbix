@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2016-07-07T09:02:55Z</date>
+    <date>2016-07-20T21:14:01Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -2297,15 +2297,7 @@
                 </macro>
                 <macro>
                     <macro>{$PGPATH}</macro>
-                    <value/>
-                </macro>
-                <macro>
-                    <macro>{$PGSCRIPTDIR}</macro>
-                    <value>/usr/local/bin</value>
-                </macro>
-                <macro>
-                    <macro>{$PGSCRIPT_CONFDIR}</macro>
-                    <value>/usr/local/etc</value>
+                    <value>/usr/lib/postgresql/9.4/bin/postgres</value>
                 </macro>
                 <macro>
                     <macro>{$PGSLOWQUERY_COUNT_THRESHOLD}</macro>
