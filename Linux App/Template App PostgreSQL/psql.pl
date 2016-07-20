@@ -9,7 +9,7 @@
 require "/usr/lib/zabbix/psqlconf.pm";
 require "/usr/lib/zabbix/zsender.pl";
 
-my $VERSION = "0.0.1";
+my $VERSION = "0.0.2";
 my $MODE	= shift || "run";
 my $BIN		= shift || "psql";
 my $PGSLOW	= shift || 10;
@@ -22,12 +22,13 @@ sub execsql {
 	my $DATABASE 	= shift;
 	my $SQL 	= shift;
 
-	return zs_system("$BIN \\
-                        -h $psqlconf::PGHOST \\
-                        -p $psqlconf::PGPORT \\
-                        -U $psqlconf::PGROLE \\
-                        -d $DATABASE -t -c \\
-                        \"$SQL\"",{%PARAM});
+	my $CLIPARAM	= "";
+
+	if( defined $psqlconf::PGHOST) { $CLIPARAM = $CLIPARAM." -h $psqlconf::PGHOST";}
+	if( defined $psqlconf::PGPORT) { $CLIPARAM = $CLIPARAM." -p $psqlconf::PGPORT";}
+	if( defined $psqlconf::PGROLE) { $CLIPARAM = $CLIPARAM." -U $psqlconf::PGROLE";}
+
+	return zs_system("$BIN $CLIPARAM -d $DATABASE -t -c \"$SQL\"",{%PARAM});
 }
 
 sub getdb {
@@ -150,10 +151,18 @@ sub m_tbldiscovery {
 zs_debug("Variables:",2,{%PARAM});
 zs_debug("\tMODE:\t\t$MODE",2,{%PARAM});
 zs_debug("\tBIN:\t\t$BIN",2,{%PARAM});
-zs_debug("\tPGHOST:\t\t$psqlconf::PGHOST",2,{%PARAM});
-zs_debug("\tPGPORT:\t\t$psqlconf::PGPORT",2,{%PARAM});
-zs_debug("\tPGROLE:\t\t$psqlconf::PGROLE",2,{%PARAM});
-zs_debug("\tPGDATABASE:\t$psqlconf::PGDATABASE",2,{%PARAM});
+if(defined $psqlconf::PGHOST){
+	zs_debug("\tPGHOST:\t\t$psqlconf::PGHOST",2,{%PARAM});
+}else{	zs_debug("\tPGHOST:\t\tundef",2,{%PARAM});}
+if(defined $psqlconf::PGPORT){
+	zs_debug("\tPGPORT:\t\t$psqlconf::PGPORT",2,{%PARAM});
+}else{	zs_debug("\tPGPORT:\t\tundef",2,{%PARAM});}
+if(defined $psqlconf::PGROLE){
+	zs_debug("\tPGROLE:\t\t$psqlconf::PGROLE",2,{%PARAM});
+}else{	zs_debug("\tPGROLE:\t\tundef",2,{%PARAM});}
+if(defined $psqlconf::PGDATABASE){
+	zs_debug("\tPGDATABASE:\t$psqlconf::PGDATABASE",2,{%PARAM});
+}else{	zs_debug("\tPGDATABASE:\tundef",2,{%PARAM});}
 
 if ($MODE eq 'dbdiscovery'){
 	m_dbdiscovery();

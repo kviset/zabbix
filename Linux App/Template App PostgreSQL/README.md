@@ -26,21 +26,19 @@
 ## Настройка
 Разрешение доступа пользователю zabbix:
 ```
- ~# psql -d postgres
+ ~# sudo -u postgres psql -d postgres
 psql (X.X.XX)
 Type "help" for help.
 
 postgres=# CREATE ROLE zabbix WITH LOGIN;
 postgres=# GRANT SELECT ON ALL TABLES IN SCHEMA public TO zabbix;
+postgres=# \q
 ```
 Создайте файл для конфигурирования скрипта мониторинга */usr/lib/zabbix/psqlconf.pm* следующего содержания:
 ```
  ~# cat > /usr/lib/zabbix/psqlconf.pm <<EOF
 package psqlconf;
 
-\$PGHOST="127.0.0.1";
-\$PGPORT="5432";
-\$PGROLE="zabbix";
 \$PGDATABASE="postgres";
 
 1;
