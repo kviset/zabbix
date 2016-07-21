@@ -2269,7 +2269,7 @@
             <macros>
                 <macro>
                     <macro>{$REDIS_BIN}</macro>
-                    <value>redis-server</value>
+                    <value>/usr/bin/redis-server</value>
                 </macro>
                 <macro>
                     <macro>{$REDIS_CONF}</macro>
