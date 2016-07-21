@@ -2293,7 +2293,7 @@
                 </macro>
                 <macro>
                     <macro>{$PGLOGDIR}</macro>
-                    <value>/usr/local/pgsql/data/pg_log</value>
+                    <value>/var/log/postgresql/</value>
                 </macro>
                 <macro>
                     <macro>{$PGPATH}</macro>

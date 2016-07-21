@@ -18,8 +18,6 @@
 {$PGDEADLOCK_THRESHOLD}		⇒0
 {$PGLOGDIR}			⇒/usr/local/pgsql/data/pg_log
 {$PGPATH}			⇒value
-{$PGSCRIPTDIR}			⇒/usr/local/bin
-{$PGSCRIPT_CONFDIR}		⇒/usr/local/etc
 {$PGSLOWQUERY_COUNT_THRESHOLD}	⇒10
 {$PGSLOWQUERY_TIME_THRESHOLD}	⇒10
 {$PGTEMPBYTES_THRESHOLD}	⇒8388608
@@ -27,6 +25,7 @@
 
 # Установка
 ## Настройка
+
 Разрешение доступа пользователю zabbix:
 ```
  ~# sudo -u postgres psql -d postgres
