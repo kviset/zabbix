@@ -1,5 +1,8 @@
 # Описание
-Файл *Template App PostgreSQL.xml* добавляет темплейт *Template App PostgreSQL*, предназначенный для мониторинга БД PostgreSQL. *Template App PostgreSQL* состоит в группах: Templates, Templates App и Templates Custom.
+Файл *Template App PostgreSQL.xml* добавляет темплейт *Template App PostgreSQL*, предназначенный для мониторинга БД PostgreSQL.
+ *Template App PostgreSQL* состоит в группах: Templates, Templates App и Templates Custom.
+
+Темпелйт выполнен на основе [pg-monz](http://pg-monz.github.io/pg_monz/index-en.html).
 
 С использованием данного темплейта осуществляется мониторинг:
 - производительности;
