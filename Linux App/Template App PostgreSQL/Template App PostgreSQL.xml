@@ -2297,7 +2297,7 @@
                 </macro>
                 <macro>
                     <macro>{$PGPATH}</macro>
-                    <value>/usr/lib/postgresql/9.4/bin/postgres</value>
+                    <value>/usr/lib/postgresql/9.4/bin</value>
                 </macro>
                 <macro>
                     <macro>{$PGSLOWQUERY_COUNT_THRESHOLD}</macro>
