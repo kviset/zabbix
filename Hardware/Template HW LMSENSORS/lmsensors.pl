@@ -7,7 +7,7 @@
 require "/usr/lib/zabbix/zsender.pl";
 #use Data::Dump qw(dump);
 
-my $VERSION	= "1.0.1";
+my $VERSION	= "1.0.2";
 my $MODE	= shift || "run";
 
 my %PARAM = (DEBUG => 0, NOSEND => 0);
@@ -25,10 +25,9 @@ sub m_send{
 	foreach $SENSOR  (@BUS){
                 my ($NAME) = $SENSOR =~ /^(.*?)$/m;
 		my @TEMP = ($SENSOR =~ /\s+(temp\d+_input):/mg);
-                my @VALUE = ($SENSOR =~ /\s+temp\d+_input:\s+([0-9|\.]+)/mg);
+		my @VALUE = ($SENSOR =~ /\s+temp\d+_input:\s+([0-9|\.]+)/mg);
 
 		for (my $I=0; $I <=$#TEMP; $I++){push @DATA,["temp[$NAME.$TEMP[$I]]",$VALUE[$I]]}
-
         }
 
 	print zs_zsender_arr($PRESTR,\@DATA,{%PARAM});
@@ -50,9 +49,12 @@ sub m_discovery{
 		my @CRIT = ($SENSOR =~ /\s+temp\d+_crit:\s+([0-9|\.]+)/mg);
 		my @WARN = ($SENSOR =~ /\s+temp\d+_max:\s+([0-9|\.]+)/mg);
 		
-		for (my $I=0; $I <=$#TEMP; $I++){push @DATA,["$NAME.$TEMP[$I]",$CRIT[$I],$WARN[$I]]}
+		for (my $I=0; $I <=$#TEMP; $I++){
+			unless(defined $WARN[$I]){$WARN[$I] = 0;}
+			push @DATA,["$NAME.$TEMP[$I]",$CRIT[$I],$WARN[$I]]
+		}
 	}
-	
+
 	print zs_discovery_2darr(\@VARNAME,\@DATA,{%PARAM});
 }
 
