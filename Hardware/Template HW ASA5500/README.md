@@ -39,7 +39,7 @@ ASA(config)# logging trap informational
 ASA(config)# logging facility 17
 ASA(config)# logging host inside 192.168.1.5
 
-``
+```
 
 Не забудте сохранить конфигурацию.
 ```
