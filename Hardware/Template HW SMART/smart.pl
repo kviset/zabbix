@@ -5,11 +5,11 @@
 #Depends:  aptitude install smartmontools
 #          zsender.pl 0.3.3
 
-use Data::Dump qw(dump);
+#use Data::Dump qw(dump);
 
 require "/usr/lib/zabbix/zsender.pl";
 
-my $VERSION		= "1.0.0";
+my $VERSION		= "1.0.1";
 my $MODE     		= shift || "run";
 
 my %PARAM = (DEBUG => 0,NOSEND => 0);
