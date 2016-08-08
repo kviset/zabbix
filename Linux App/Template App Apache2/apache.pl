@@ -8,11 +8,10 @@
 require "/usr/lib/zabbix/zsender.pl";
 
 #defaults
-my $VERSION	= "1.0.5";
+my $VERSION	= "1.0.6";
 my $URL		= shift || "http://127.0.0.1/server-status"; $URL = "$URL?auto";
-my $EXEC_TIMEOUT= 2;
 
-my %PARAM = (DEBUG => 0);
+my %PARAM = (DEBUG => 0, EXEC_TIMEOUT => 10);
 my $PRESTR = "script.apache.";
 my @DATA = ();
 

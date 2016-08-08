@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2016-07-07T15:02:57Z</date>
+    <date>2016-08-08T13:25:57Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -219,7 +219,7 @@
                             <dependencies/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template Rmt PingNslookup:script.internet.nslookup[{#ADDR}].last()}&gt;0.5</expression>
+                            <expression>{Template Rmt PingNslookup:script.internet.nslookup[{#ADDR}].last()}&gt;2.5</expression>
                             <name>Internet: dns - too long resolve {#ADDR}</name>
                             <url/>
                             <status>0</status>

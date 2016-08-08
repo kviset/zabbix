@@ -12,8 +12,8 @@ my $MODE	= shift || "run";
 my $INT		= shift || "eth0";	#gw interface
 my $GWIP	= shift; 		#default GW IP for mode run
 
-my $VERSION = "0.1.0";
-my %PARAM = (DEBUG => 0, NOSEND => 0, EXEC_TIMEOUT => 10);
+my $VERSION = "0.1.1";
+my %PARAM = (DEBUG => 0, NOSEND => 0, EXEC_TIMEOUT => 15);
 
 sub run {
 	my $PRESTR = "script.gateway.";
