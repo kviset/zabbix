@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2016-08-09T14:40:01Z</date>
+    <date>2016-08-10T14:38:57Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -1252,16 +1252,6 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Template HW HP2530:sysUpTime.last()}&lt;900</expression>
-            <name>HP1920: just restarted</name>
-            <url/>
-            <status>0</status>
-            <priority>1</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-        <trigger>
             <expression>{Template HW HP2530:snmp.hp2530.fan.state.last()}=2</expression>
             <name>HP2530: Fan  - bad</name>
             <url/>
@@ -1297,6 +1287,16 @@
             <url/>
             <status>0</status>
             <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template HW HP2530:sysUpTime.last()}&lt;900</expression>
+            <name>HP2530: just restarted</name>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
             <description/>
             <type>0</type>
             <dependencies/>
