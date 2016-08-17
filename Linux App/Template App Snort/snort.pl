@@ -9,11 +9,11 @@ use Sys::Syslog;
 require "/usr/lib/zabbix/snortconf.pm";
 require "/usr/lib/zabbix/zsender.pl";
 
-my $VERSION = "1.3.0";
+my $VERSION = "1.4.0";
 my $MODE    = shift || "run";
 my $LOG     = shift || undef;
 
-my %PARAM = (DEBUG => 1, NOSEND => 0);
+my %PARAM = (DEBUG => 0, NOSEND => 0);
 my $PRESTR = "script.snort";
 my @DATA = ();
 
@@ -41,6 +41,7 @@ sub m_send {
 	push @DATA,["version",$VERSION];
 	push @DATA,["barnyard2.proc",zs_system("ps -C barnyard2 --no-headers |wc -l",{%PARAM})];
 	push @DATA,["snort.proc",zs_system("ps -C snort --no-headers |wc -l",{%PARAM})];
+	push @DATA,["instance",($#snortconf::INSTNAME+1)];
 
 	my @VALUES = (0) x 131;
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2016-07-13T13:53:36Z</date>
+    <date>2016-08-17T12:11:25Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -236,6 +236,49 @@
                     <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>session/s</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>snort</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>snort: instance count</name>
+                    <type>2</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>script.snort.instance</key>
+                    <delay>0</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
                     <delta>0</delta>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
@@ -1338,8 +1381,8 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Template App Snort:script.snort.barnyard2.proc.last()}&lt;2</expression>
-            <name>snort: barnyard2 not running</name>
+            <expression>{Template App Snort:script.snort.barnyard2.proc.last()}&lt;&gt;{Template App Snort:script.snort.instance.last()}</expression>
+            <name>snort: barnyard2 not running or wrong count</name>
             <url/>
             <status>0</status>
             <priority>5</priority>
@@ -1391,8 +1434,8 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template App Snort:script.snort.snort.proc.last()}&lt;2</expression>
-            <name>snort: snort not running</name>
+            <expression>{Template App Snort:script.snort.snort.proc.last()}&lt;&gt;{Template App Snort:script.snort.instance.last()}</expression>
+            <name>snort: snort not running or wrong count</name>
             <url/>
             <status>0</status>
             <priority>5</priority>
@@ -1406,16 +1449,6 @@
             <url/>
             <status>0</status>
             <priority>2</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-        <trigger>
-            <expression>{Template App Snort:script.snort.barnyard2.proc.last()}&gt;2</expression>
-            <name>snort:  too many barnyard2 running</name>
-            <url/>
-            <status>0</status>
-            <priority>5</priority>
             <description/>
             <type>0</type>
             <dependencies/>
