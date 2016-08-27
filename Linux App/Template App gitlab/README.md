@@ -35,5 +35,17 @@
  ~# gitlab-ctl restart
 ```
 
+Создайте файл */usr/lib/zabbix/psqlconf.pm* следующего содержания:
+```
+package psqlconf;
+
+$PGHOST="/var/opt/gitlab/postgresql";
+$PGPORT="5432";
+$PGROLE="zabbix";
+$PGDATABASE="postgres";
+
+1;
+```
+
 ## Установка
 Добавьте хост в темплейт *Template App gitlab*
