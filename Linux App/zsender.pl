@@ -2,7 +2,7 @@
 #Place:		/usr/lob/zabbix
 #Depends:	aptitude install zabbix-sender
 
-my $VERSION		= "0.3.8";
+my $VERSION		= "0.3.9";
 
 #ZABBIX SERVER PARAMETERS
 my $ZABBIX_AGENTD_CONF  = '/etc/zabbix/zabbix_agentd.conf';
@@ -130,7 +130,11 @@ sub zs_discovery_2darr {
 		for(my $N=0;$N<=$#VARNAME;$N++){
 			$RESULT = $RESULT."," if not $rowfirst;
 			$rowfirst = 0;
-			$RESULT = $RESULT."\"{#$VARNAME[$N]}\":\"$VALUES[$I][$N]\"";
+                        if (defined $VALUES[$I][$N]){
+                                $RESULT = $RESULT."\"{#$VARNAME[$N]}\":\"$VALUES[$I][$N]\"";
+                        }else{
+                                $RESULT = $RESULT."\"{#$VARNAME[$N]}\":\"0\"";
+                        }
 		}
 		
 		$RESULT = $RESULT."}";
