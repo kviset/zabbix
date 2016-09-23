@@ -14,7 +14,7 @@ require "/usr/lib/zabbix/ovpnconf.pm";
 
 my $MODE	= shift || "run";
 
-my $VERSION	= "1.0.0";
+my $VERSION	= "1.0.1";
 my %PARAM 	= (DEBUG => 0, NOSEND => 0);
 my $PRESTR 	= "script.openvpn";
 my @DATA 	= ();
@@ -63,11 +63,11 @@ sub m_run {
 	my @CLIENTS = split /\n/,$RESULT;
 	foreach my $str (@CLIENTS){
 		my @STATS_CLIENT = split /,/,$str;
-		push @DATA,["realaddress",$STATS_CLIENT[1],$STATS_CLIENT[0]];
-		push @DATA,["incomming",$STATS_CLIENT[2],$STATS_CLIENT[0]];
-		push @DATA,["outbound",$STATS_CLIENT[3],$STATS_CLIENT[0]];
+		push @DATA,["realaddress",$STATS_CLIENT[1],lc $STATS_CLIENT[0]];
+		push @DATA,["incomming",$STATS_CLIENT[2],lc $STATS_CLIENT[0]];
+		push @DATA,["outbound",$STATS_CLIENT[3],lc $STATS_CLIENT[0]];
 		my $uptime = time - parsedate($STATS_CLIENT[4]);
-		push @DATA,["uptime",$uptime,$STATS_CLIENT[0]];
+		push @DATA,["uptime",$uptime,lc $STATS_CLIENT[0]];
 	}
 
 	#Close connections
